@@ -76,5 +76,14 @@ PRODUCT_SOONG_NAMESPACES += \
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8350-common/common.mk)
 
+# China connectivity tuning.
+$(call inherit-product, vendor/extra/china-network/china-network.mk)
+
+# Prebuilt privileged apps.
+$(call inherit-product, vendor/extra/prebuiltapps/prebuiltapps.mk)
+
+# Internal location debugging tool.
+$(call inherit-product, vendor/extra/locationapp/locationapp.mk)
+
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/lemonadep/lemonadep-vendor.mk)
